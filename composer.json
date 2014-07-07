@@ -2,7 +2,7 @@
   "name": "subdee/etsysocial",
   "description": "Post your Etsy shop items to social media",
   "minimum-stability": "alpha",
-  "license": "GPL3v1",
+  "license": "GPLv2",
   "authors": [
     {
       "name": "Kostas Subdee",
