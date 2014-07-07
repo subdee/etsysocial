@@ -1,0 +1,21 @@
+{
+  "name": "subdee/etsysocial",
+  "description": "Post your Etsy shop items to social media",
+  "minimum-stability": "alpha",
+  "license": "GPL3v1",
+  "authors": [
+    {
+      "name": "Kostas Subdee",
+      "email": "info@subdee.org"
+    }
+  ],
+  "require": {
+    "jublonet/codebird-php": "2.5.0",
+    "hpatoio/bitly-api": "~2.0",
+    "facebook/php-sdk-v4" : "4.0.*",
+    "mnapoli/php-di": "~4.0"
+  },
+  "autoload": {
+    "psr-4": {"subdee\\etsysocial\\": "src/"}
+  }
+}
