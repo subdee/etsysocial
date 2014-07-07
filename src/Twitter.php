@@ -1,5 +1,5 @@
 <?php
-namespace subdee\etsysocial\lib;
+namespace subdee\etsysocial;
 
 use Codebird\Codebird;
 

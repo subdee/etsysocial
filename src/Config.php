@@ -1,5 +1,5 @@
 <?php
-namespace subdee\etsysocial\lib;
+namespace subdee\etsysocial;
 
 class Config {
     const ETSY_KEY = '';

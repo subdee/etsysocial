@@ -16,6 +16,8 @@
     "mnapoli/php-di": "~4.0"
   },
   "autoload": {
-    "psr-4": {"subdee\\etsysocial\\": "src/"}
+    "psr-4": {
+      "subdee\\etsysocial\\": "src/"
+    }
   }
 }
