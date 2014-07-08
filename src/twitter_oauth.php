@@ -1,11 +1,11 @@
 <?php
-require_once '../EtsySocial.php';
+include('bootstrap.php');
 
 session_start();
 $_SERVER['HTTP_HOST'] = '127.0.0.1';
 $_SERVER['REQUEST_URI'] = '/etsysocial/src/twitter_oauth.php';
 
-$twitter = new \subdee\etsysocial\lib\Twitter();
+$twitter = new \subdee\etsysocial\Twitter();
 if (! isset($_SESSION['oauth_token'])) {
     $authUrl = $twitter->requestOauthToken();
     header('Location: ' . $authUrl);
