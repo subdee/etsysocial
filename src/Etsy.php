@@ -22,7 +22,7 @@ class Etsy
 
     public function getListings($shop)
     {
-        $ch = curl_init('https://openapi.etsy.com/v2/shops/' . $shop . '/listings/active?api_key=' . Config::ETSY_KEY);
+        $ch = curl_init('https://openapi.etsy.com/v2/shops/' . $shop . '/listings/active?api_key=' . Config::ETSY_KEY . '&limit=100');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $res = curl_exec($ch);
         return json_decode($res);
