@@ -5,10 +5,15 @@ class Etsy
 {
     public function getRandomEtsyListing()
     {
+        $db = new EtsyDb();
         if ($listings = $this->getListings(Config::ETSY_SHOP)) {
-            $getRandom = function ($listings) use (&$getRandom) {
+            $getRandom = function ($listings) use (&$getRandom,$db) {
                 $rand = rand(0, $listings->count);
-                return isset($listings->results[$rand]) ? $listings->results[$rand] : $getRandom($listings);
+                if (isset($listings->results[$rand]) && $db->isNotMaxListing($rand)) {
+                    $db->incrementListing($rand);
+                    return $listings->results[$rand];
+                }
+                return $getRandom($listings);
             };
             return $getRandom($listings);
         }
