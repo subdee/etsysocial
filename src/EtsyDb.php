@@ -8,7 +8,7 @@ class EtsyDb
 
     public function __construct()
     {
-        $this->db = new \PDO('sqlite:etsysocial.sqlite3');
+        $this->db = new \PDO('sqlite:' . __DIR__ . '/etsysocial.sqlite3');
         $this->db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 
         $this->db->exec("CREATE TABLE IF NOT EXISTS listing (
